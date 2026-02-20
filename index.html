@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PowerServe Inc | Electrical Contractors — Windsor, ON</title>
+<meta name="description" content="PowerServe Inc — trusted Electrical Contractors serving Windsor and Southwestern Ontario. ESA licensed. Call 519-945-3558 for a free project estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0f2b4f;
+  --orange:#e05c2a;
+  --light:#f0f4f8;
+  --white:#ffffff;
+  --text:#1a1a2e;
+  --body:#4a5568;
+  --muted:#718096;
+  --border:#e2e8f0;
+  --shadow:0 2px 16px rgba(15,43,79,0.09);
+  --shadow-lg:0 8px 40px rgba(15,43,79,0.14);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',system-ui,sans-serif;background:var(--white);color:var(--text);line-height:1.6}
+h1,h2,h3,h4{font-family:'Outfit',sans-serif;font-weight:700;line-height:1.15}
+.section-label{display:inline-block;font-family:'Outfit',sans-serif;font-size:0.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.section-h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800;color:var(--navy);letter-spacing:-0.5px}
+.section-h2.light{color:#fff}
+.section-p{font-size:0.97rem;color:var(--body);line-height:1.8}
+.btn-primary{display:inline-block;background:var(--orange);color:#fff;padding:15px 34px;border-radius:6px;font-family:'Outfit',sans-serif;font-weight:700;font-size:0.96rem;text-decoration:none;transition:all .22s;border:none;cursor:pointer}
+.btn-primary:hover{background:#c94d1f;transform:translateY(-2px);box-shadow:0 10px 28px rgba(224,92,42,0.35)}
+.btn-outline{display:inline-block;background:transparent;color:var(--navy);border:2px solid var(--navy);padding:13px 32px;border-radius:6px;font-family:'Outfit',sans-serif;font-weight:700;font-size:0.96rem;text-decoration:none;transition:all .22s}
+.btn-outline.white{color:#fff;border-color:rgba(255,255,255,0.7)}
+.btn-outline.white:hover{background:rgba(255,255,255,0.15)}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);box-shadow:0 1px 0 var(--border),0 4px 20px rgba(15,43,79,0.07)}
+.nav-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px;padding:0 5%}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-mark{width:40px;height:40px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.nav-logo-text{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:var(--navy);line-height:1.2}
+.nav-logo-text span{color:var(--orange);display:block;font-size:0.62rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.nav-menu{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-menu a{color:var(--body);text-decoration:none;font-size:0.88rem;font-weight:700;font-family:'Outfit',sans-serif;transition:color .2s}
+.nav-menu a:hover{color:var(--navy)}
+.nav-phone{background:var(--orange);color:#fff;padding:9px 20px;border-radius:6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.85rem;text-decoration:none;white-space:nowrap}
+.nav-phone:hover{background:#c94d1f}
+@media(max-width:760px){.nav-menu{display:none}}
+/* HERO */
+.hero{margin-top:70px;min-height:88vh;display:grid;grid-template-columns:1fr 1fr}
+.hero-l{background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:80px 8%;position:relative;overflow:hidden}
+.hero-l::before{content:'';position:absolute;top:-40%;right:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(224,92,42,0.12) 0%,transparent 65%);pointer-events:none}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(224,92,42,0.18);border:1px solid rgba(224,92,42,0.4);color:var(--orange);padding:6px 16px;border-radius:4px;font-family:'Outfit',sans-serif;font-size:0.73rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px}
+.hero-h1{font-size:clamp(2.4rem,4.5vw,4rem);font-weight:900;color:#fff;line-height:1.07;letter-spacing:-1.5px;margin-bottom:20px}
+.hero-h1 em{color:var(--orange);font-style:normal}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.72);line-height:1.78;max-width:440px;margin-bottom:38px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;padding-top:36px;border-top:1px solid rgba(255,255,255,0.12)}
+.hstat-v{font-family:'Outfit',sans-serif;font-size:1.9rem;font-weight:900;color:#fff;line-height:1}
+.hstat-l{font-size:0.72rem;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
+.hero-r{position:relative;overflow:hidden}
+.hero-r img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-r-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,43,79,0.22) 0%,transparent 55%)}
+.hero-badge{position:absolute;bottom:28px;left:28px;background:var(--white);border-radius:10px;padding:16px 20px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:12px}
+.hero-badge-ic{width:40px;height:40px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.hero-badge-tx strong{display:block;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.9rem;color:var(--navy)}
+.hero-badge-tx span{font-size:0.78rem;color:var(--muted)}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-r{height:280px}}
+/* TRUST STRIP */
+.trust{background:var(--navy);padding:14px 5%;border-top:3px solid var(--orange)}
+.trust-in{max-width:1200px;margin:0 auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.ti{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.8);font-size:0.83rem;font-weight:700;font-family:'Outfit',sans-serif}
+.ti-chk{width:17px;height:17px;background:var(--orange);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.58rem;color:#fff}
+/* SERVICES */
+.svcs{padding:94px 5%;background:var(--white)}
+.svcs-in{max-width:1200px;margin:0 auto}
+.sec-hd{margin-bottom:50px}
+.sec-hd.ctr{text-align:center}
+.sec-hd.ctr .section-p{max-width:540px;margin:14px auto 0}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:22px}
+.svc-card{background:var(--white);border-radius:10px;padding:28px 28px 28px 32px;box-shadow:var(--shadow);border-left:4px solid var(--orange);transition:all .25s}
+.svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-left-color:var(--navy)}
+.svc-icon{font-size:2rem;margin-bottom:14px;display:block}
+.svc-card h3{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:10px}
+.svc-card p{font-size:0.87rem;color:var(--body);line-height:1.7}
+.svc-cta{display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;font-weight:700;color:var(--orange);margin-top:14px;text-decoration:none;font-family:'Outfit',sans-serif;transition:gap .2s}
+.svc-cta:hover{gap:9px}
+/* PROCESS */
+.proc{padding:94px 5%;background:var(--light)}
+.proc-in{max-width:1200px;margin:0 auto}
+.proc-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;margin-top:52px;position:relative}
+.proc-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:2px;background:var(--border);z-index:0}
+@media(max-width:700px){.proc-steps::before{display:none}}
+.step{text-align:center;padding:0 16px;position:relative;z-index:1}
+.step-num{width:56px;height:56px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:900;margin:0 auto 20px;box-shadow:0 0 0 6px var(--light),0 0 0 8px var(--border)}
+.step:hover .step-num{background:var(--orange)}
+.step h3{font-size:0.98rem;font-weight:800;color:var(--navy);margin-bottom:10px}
+.step p{font-size:0.85rem;color:var(--body);line-height:1.7}
+/* CTA BAND */
+.ctaband{background:var(--orange);padding:72px 5%;text-align:center}
+.ctaband-in{max-width:800px;margin:0 auto}
+.ctaband h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:#fff;letter-spacing:-0.5px;margin-bottom:14px}
+.ctaband p{color:rgba(255,255,255,0.88);font-size:1rem;line-height:1.75;margin-bottom:36px}
+.ctaband-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--orange);padding:15px 34px;border-radius:6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.96rem;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-white:hover{background:rgba(255,255,255,0.9);transform:translateY(-2px)}
+.btn-ghost-w{background:transparent;border:2px solid rgba(255,255,255,0.7);color:#fff;padding:13px 32px;border-radius:6px;font-family:'Outfit',sans-serif;font-weight:700;font-size:0.96rem;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-ghost-w:hover{background:rgba(255,255,255,0.15)}
+/* GALLERY */
+.gal{padding:94px 5%;background:var(--white)}
+.gal-in{max-width:1200px;margin:0 auto}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px;margin-top:46px}
+.gc{border-radius:8px;overflow:hidden;position:relative}
+.gc img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gc:hover img{transform:scale(1.06)}
+.gc.tall{grid-row:span 2}
+.gc.wide{grid-column:span 2}
+.gc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,43,79,0.72) 0%,transparent 55%);opacity:0;transition:opacity .3s}
+.gc:hover .gc-ov{opacity:1}
+.gc-lbl{position:absolute;bottom:14px;left:16px;color:#fff;font-family:'Outfit',sans-serif;font-size:0.82rem;font-weight:700;transform:translateY(8px);transition:transform .3s,opacity .3s;opacity:0}
+.gc:hover .gc-lbl{opacity:1;transform:translateY(0)}
+@media(max-width:760px){.gal-grid{grid-template-columns:repeat(2,1fr)}.gc.tall,.gc.wide{grid-row:span 1;grid-column:span 1}}
+/* ABOUT */
+.abt{padding:94px 5%;background:var(--light)}
+.abt-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:5fr 6fr;gap:70px;align-items:center}
+.abt-imgs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.abt-img-main{grid-column:1/-1;border-radius:12px;overflow:hidden;height:280px}
+.abt-img-main img{width:100%;height:100%;object-fit:cover}
+.abt-img-sm{border-radius:10px;overflow:hidden;height:170px}
+.abt-img-sm img{width:100%;height:100%;object-fit:cover}
+.abt-h2{margin-bottom:18px}
+.abt-pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.abt-pill{background:var(--white);border:1.5px solid var(--border);color:var(--navy);padding:7px 18px;border-radius:20px;font-size:0.83rem;font-weight:700;font-family:'Outfit',sans-serif}
+.abt-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.phone-lnk{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.05rem;color:var(--orange);text-decoration:none;display:flex;align-items:center;gap:7px}
+.phone-lnk:hover{color:#c94d1f}
+@media(max-width:900px){.abt-in{grid-template-columns:1fr}}
+/* REVIEWS */
+.rvws{padding:94px 5%;background:var(--navy)}
+.rvws-in{max-width:1200px;margin:0 auto}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:10px}
+.rev-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:28px;position:relative;transition:all .25s}
+.rev-card:hover{background:rgba(255,255,255,0.1);transform:translateY(-3px)}
+.rev-quote{font-size:3rem;color:var(--orange);line-height:0.7;margin-bottom:16px;font-family:Georgia,serif;opacity:0.8}
+.rev-text{font-size:0.91rem;color:rgba(255,255,255,0.82);line-height:1.76;margin-bottom:18px;font-style:italic}
+.rev-foot{display:flex;align-items:center;gap:12px}
+.rev-av{width:40px;height:40px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.9rem;color:#fff;flex-shrink:0}
+.rev-info strong{display:block;color:#fff;font-weight:700;font-size:0.86rem;font-family:'Outfit',sans-serif}
+.rev-info span{font-size:0.75rem;color:rgba(255,255,255,0.5)}
+.rev-stars{color:var(--orange);font-size:0.85rem;position:absolute;top:24px;right:24px}
+.rating-bar{text-align:center;padding-bottom:40px}
+.big-rtg{font-family:'Outfit',sans-serif;font-size:4rem;font-weight:900;color:#fff;line-height:1}
+.stars-row{color:var(--orange);font-size:1.4rem;letter-spacing:3px;margin:8px 0 4px}
+.rating-bar>span{color:rgba(255,255,255,0.5);font-size:0.83rem}
+/* AREA */
+.area{padding:72px 5%;background:var(--white)}
+.area-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.area-map{background:var(--light);border-radius:14px;padding:32px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.area-pill{background:var(--white);border:1.5px solid var(--border);border-radius:8px;padding:10px 14px;text-align:center;font-family:'Outfit',sans-serif;font-size:0.82rem;font-weight:700;color:var(--navy);transition:all .2s}
+.area-pill:hover{border-color:var(--orange);color:var(--orange)}
+.area-pill.home{background:var(--navy);color:#fff;border-color:var(--navy)}
+.area-rad{display:flex;align-items:center;gap:12px;padding:16px 20px;background:var(--light);border-radius:8px;border-left:3px solid var(--orange);margin-top:22px}
+.area-rad strong{font-family:'Outfit',sans-serif;font-weight:800;color:var(--navy);font-size:0.9rem;display:block}
+.area-rad span{color:var(--body);font-size:0.83rem}
+@media(max-width:880px){.area-in{grid-template-columns:1fr}}
+/* CONTACT */
+.ctct{padding:94px 5%;background:var(--light)}
+.ctct-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.cdet{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.cdet-ic{width:44px;height:44px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.cdet-tx strong{display:block;font-family:'Outfit',sans-serif;font-weight:800;color:var(--navy);font-size:0.9rem;margin-bottom:2px}
+.cdet-tx a,.cdet-tx span{color:var(--body);font-size:0.88rem;text-decoration:none;transition:color .2s}
+.cdet-tx a:hover{color:var(--orange)}
+.cfrm{background:var(--white);border-radius:14px;padding:36px;box-shadow:var(--shadow-lg)}
+.cfrm h3{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.1rem;color:var(--navy);margin-bottom:24px}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-family:'Outfit',sans-serif;font-size:0.72rem;font-weight:800;color:var(--navy);margin-bottom:7px;text-transform:uppercase;letter-spacing:.8px}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--white);border:1.5px solid var(--border);color:var(--text);padding:11px 15px;border-radius:7px;font-size:0.91rem;transition:border-color .2s;outline:none;font-family:'Lato',sans-serif}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--navy)}
+.fg textarea{resize:vertical;min-height:112px}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fsub{width:100%;background:var(--navy);color:#fff;padding:14px;border-radius:7px;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.96rem;border:none;cursor:pointer;transition:all .2s}
+.fsub:hover{background:#0a1f3f;transform:translateY(-1px);box-shadow:0 8px 22px rgba(15,43,79,0.28)}
+@media(max-width:900px){.ctct-in{grid-template-columns:1fr}}
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:56px 5% 30px}
+.ft-in{max-width:1200px;margin:0 auto}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:28px}
+.ft-nm{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:10px}
+.ft-brand p{font-size:0.84rem;line-height:1.75;max-width:300px}
+.ft-col h4{font-family:'Outfit',sans-serif;font-size:0.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.ft-col a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.86rem;transition:color .2s}
+.ft-col a:hover{color:#fff}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:0.78rem}
+.orange{color:var(--orange)}
+@media(max-width:760px){.ft-top{grid-template-columns:1fr 1fr}.ft-top>div:first-child{grid-column:1/-1}}
+/* FLOAT CALL */
+.fcall{position:fixed;bottom:28px;right:28px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.fcall-bbl{background:var(--navy);color:#fff;padding:12px 18px;border-radius:12px 12px 4px 12px;font-size:0.83rem;font-weight:700;font-family:'Outfit',sans-serif;box-shadow:var(--shadow-lg);display:none;white-space:nowrap}
+.fcall-bbl span{color:var(--orange)}
+.fcall:hover .fcall-bbl{display:block}
+.fcall-btn{background:var(--orange);color:#fff;border:none;border-radius:50px;padding:13px 22px;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.9rem;cursor:pointer;box-shadow:0 6px 24px rgba(224,92,42,0.44);transition:all .2s;display:flex;align-items:center;gap:8px}
+.fcall-btn:hover{background:#c94d1f;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">⚡</div>
+      <div class="nav-logo-text">
+        PowerServe Inc
+        <span>Electrical Contractors · Windsor, ON</span>
+      </div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How It Works</a></li>
+      <li><a href="#gallery">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:+15199453558" class="nav-phone">📞 519-945-3558</a>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="hero-l">
+    <div class="hero-kicker">✦ Licensed Electrical Contractors</div>
+    <h1 class="hero-h1">Large-Scale<br><em>Electrical</em><br>Contracting.</h1>
+    <p class="hero-sub">Powerful solutions for large-scale commercial, institutional, industrial and agricultural electrical projects across Southwestern Ontario.</p>
+    <div class="hero-ctas">
+      <a href="tel:+15199453558" class="btn-primary">📞 Call 519-945-3558</a>
+      <a href="#contact" class="btn-outline white">Request a Quote</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hstat-v">5.0★</div><div class="hstat-l">Google Rating</div></div>
+      <div><div class="hstat-v">20+</div><div class="hstat-l">Years in Business</div></div>
+      <div><div class="hstat-v">ESA</div><div class="hstat-l">Licensed #7000582</div></div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <img src="images/slider1.jpg" alt="PowerServe Inc — large-scale electrical project">
+    <div class="hero-r-ov"></div>
+    <div class="hero-badge">
+      <div class="hero-badge-ic">⭐</div>
+      <div class="hero-badge-tx">
+        <strong>5.0 Stars on Google</strong>
+        <span>Windsor & Southwestern Ontario</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-in">
+    <div class="ti"><div class="ti-chk">✓</div> ESA/ECRA Lic. #7000582</div>
+    <div class="ti"><div class="ti-chk">✓</div> Eaton Certified Contractor</div>
+    <div class="ti"><div class="ti-chk">✓</div> 5.0★ Google Rating</div>
+    <div class="ti"><div class="ti-chk">✓</div> Founded 2002</div>
+    <div class="ti"><div class="ti-chk">✓</div> Free Written Estimates</div>
+    <div class="ti"><div class="ti-chk">✓</div> Southwestern Ontario</div>
+  </div>
+</div>
+
+<section class="svcs" id="services">
+  <div class="svcs-in">
+    <div class="sec-hd">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-h2">Our Services</h2>
+      <p class="section-p" style="margin-top:12px;max-width:560px">Commercial, institutional, industrial and agricultural electrical — any size project, anywhere in Southwestern Ontario.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <span class="svc-icon">🏗️</span>
+        <h3>New Construction</h3>
+        <p>Complete electrical systems for new commercial, industrial and institutional builds from ground up — on schedule and to spec.</p>
+        <a href="#contact" class="svc-cta">Get a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🔧</span>
+        <h3>Renovation & Upgrades</h3>
+        <p>Service upgrades, panel replacements and full electrical renovations for facilities large and small.</p>
+        <a href="#contact" class="svc-cta">Get a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">⚡</span>
+        <h3>Transformers</h3>
+        <p>Installation, maintenance and replacement of commercial and industrial transformers of all sizes.</p>
+        <a href="#contact" class="svc-cta">Get a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🔒</span>
+        <h3>Fire Alarm & Security Systems</h3>
+        <p>ULC-compliant fire alarm systems and integrated security solutions designed for your facility.</p>
+        <a href="#contact" class="svc-cta">Get a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">💡</span>
+        <h3>Energy-Efficient Lighting</h3>
+        <p>LED retrofits and energy-efficient lighting designs that slash operating costs and meet modern code requirements.</p>
+        <a href="#contact" class="svc-cta">Get a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">☀️</span>
+        <h3>Renewable Energy</h3>
+        <p>Solar panel installation, battery storage and renewable energy system maintenance to reduce your carbon footprint.</p>
+        <a href="#contact" class="svc-cta">Get a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🛡️</span>
+        <h3>Preventative Maintenance</h3>
+        <p>Scheduled inspections and maintenance programs that prevent costly downtime and extend the life of your electrical infrastructure.</p>
+        <a href="#contact" class="svc-cta">Get a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🛣️</span>
+        <h3>Roadway Pole Lines</h3>
+        <p>Design and installation of roadway lighting, pole lines and outdoor electrical systems for municipalities and developers.</p>
+        <a href="#contact" class="svc-cta">Get a Quote →</a>
+      </div></div>
+  </div>
+</section>
+
+<section class="proc" id="process">
+  <div class="proc-in">
+    <div class="sec-hd ctr">
+      <div class="section-label">The Process</div>
+      <h2 class="section-h2">How It Works</h2>
+      <p class="section-p" style="max-width:500px;margin:12px auto 0">Transparent, no-surprise electrical projects. Here's what to expect when you work with PowerServe.</p>
+    </div>
+    <div class="proc-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Contact Us</h3>
+        <p>Call 519-945-3558 or fill out a request form. Our team reviews your project details and follows up fast — typically same business day.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Site Review & Estimate</h3>
+        <p>We assess your site, scope the work and deliver a clear, written estimate — no hidden costs, no surprises.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Expert Execution</h3>
+        <p>Our licensed electricians, project managers and estimators execute your project on time, with quality craftsmanship at every stage.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Project Sign-Off</h3>
+        <p>We walk you through the completed work, handle all inspections and sign off only when you're completely satisfied.</p>
+      </div></div>
+  </div>
+</section>
+
+<div class="ctaband">
+  <div class="ctaband-in">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Whether it's new construction, a facility upgrade or a renewable energy install — our team is ready. Call or request a free written estimate today.</p>
+    <div class="ctaband-btns">
+      <a href="tel:+15199453558" class="btn-white">📞 Call 519-945-3558</a>
+      <a href="#contact" class="btn-ghost-w">Request a Quote</a>
+    </div>
+  </div>
+</div>
+
+<section class="gal" id="gallery">
+  <div class="gal-in">
+    <div class="sec-hd">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-h2">Recent Projects</h2>
+      <p class="section-p" style="margin-top:12px;max-width:500px">Commercial, industrial, institutional and agricultural projects across Windsor and Southwestern Ontario.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gc wide tall"><img src="images/slider1.jpg" alt="Industrial electrical project"><div class="gc-ov"></div><div class="gc-lbl">Industrial Installation</div></div>
+      <div class="gc"><img src="images/slider2.jpg" alt="Commercial project"><div class="gc-ov"></div><div class="gc-lbl">Commercial</div></div>
+      <div class="gc"><img src="images/slider3.jpg" alt="Institutional project"><div class="gc-ov"></div><div class="gc-lbl">Institutional</div></div>
+      <div class="gc"><img src="images/slider4.jpg" alt="Agricultural project"><div class="gc-ov"></div><div class="gc-lbl">Agricultural</div></div>
+      <div class="gc"><img src="images/slider2.jpg" alt="Renewable energy installation"><div class="gc-ov"></div><div class="gc-lbl">Renewable Energy</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="abt" id="about">
+  <div class="abt-in">
+    <div class="abt-imgs">
+      <div class="abt-img-main"><img src="images/slider2.jpg" alt="PowerServe Inc team"></div>
+      <div class="abt-img-sm"><img src="images/slider3.jpg" alt="Project site"></div>
+      <div class="abt-img-sm"><img src="images/slider4.jpg" alt="Completed installation"></div>
+    </div>
+    <div class="abt-cnt">
+      <div class="section-label">About Us</div>
+      <h2 class="section-h2 abt-h2">Serving Windsor &amp;<br>Southwestern Ontario<br>Since 2002</h2>
+      <p class="section-p" style="margin-top:16px">PowerServe Inc. is your source for powerful solutions to large-scale electrical projects. Founded in January 2002 by master electricians Clint Attard and Keith McIntyre, our team of licensed electricians, estimators and project managers can optimize the electrical systems of any commercial, institutional or industrial operation. We are equipped to handle any size construction, renovation and custom design job.</p>
+      <p class="section-p" style="margin-top:12px">Our management team brings over 40 years of combined industry experience. We hold ESA/ECRA licence #7000582 and are a proud member of the Eaton Certified Contractor Network (ECCN). From new construction to renewable energy installations, we deliver expert guidance through every phase of your project.</p>
+      <div class="abt-pills">
+        <div class="abt-pill">✓ ESA Lic. #7000582</div>
+        <div class="abt-pill">✓ Eaton ECCN Member</div>
+        <div class="abt-pill">✓ Master Electricians</div>
+        <div class="abt-pill">✓ Founded 2002</div>
+        <div class="abt-pill">✓ Free Estimates</div>
+      </div>
+      <div class="abt-cta">
+        <a href="tel:+15199453558" class="btn-primary">Get a Free Quote</a>
+        <a href="tel:+15199453558" class="phone-lnk">📞 519-945-3558</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rvws" id="reviews">
+  <div class="rvws-in">
+    <div class="sec-hd ctr" style="text-align:center">
+      <div class="section-label">Reviews</div>
+      <h2 class="section-h2 light" style="margin-bottom:24px">What Our Clients Say</h2>
+      <div class="rating-bar">
+        <div class="big-rtg">5.0</div>
+        <div class="stars-row">★★★★★</div>
+        <span>Google Reviews — Windsor, ON</span>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <div class="rev-quote">"</div>
+        <p class="rev-text">PowerServe handled the full electrical installation for our new warehouse — on budget and delivered on time. Their project management is top-notch. Highly recommend for any large-scale industrial job.</p>
+        <div class="rev-foot">
+          <div class="rev-av">M</div>
+          <div class="rev-info">
+            <strong>M. R.</strong>
+            <span>Google Review — Windsor, ON</span>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <div class="rev-quote">"</div>
+        <p class="rev-text">We've used PowerServe for several facility upgrades across our commercial properties in Windsor. Reliable, licensed, and the team communicates well throughout the project. World-class service.</p>
+        <div class="rev-foot">
+          <div class="rev-av">D</div>
+          <div class="rev-info">
+            <strong>D. T.</strong>
+            <span>Google Review — Windsor, ON</span>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <div class="rev-quote">"</div>
+        <p class="rev-text">Had PowerServe install our new fire alarm system and LED lighting retrofit. The crew showed up on time every day and the finished work passed inspection with zero issues.</p>
+        <div class="rev-foot">
+          <div class="rev-av">K</div>
+          <div class="rev-info">
+            <strong>K. L.</strong>
+            <span>Google Review — Windsor, ON</span>
+          </div>
+        </div>
+      </div></div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="area-in">
+    <div>
+      <div class="section-label">Service Area</div>
+      <h2 class="section-h2">Southwestern Ontario</h2>
+      <p class="section-p" style="margin-top:12px">Based in Windsor, we serve commercial, industrial, institutional and agricultural clients across the region. Not sure if we cover your area? Just call.</p>
+      <div class="area-rad">
+        <span style="font-size:1.4rem">📍</span>
+        <div>
+          <strong>Based in Windsor, ON (N8S 3K6)</strong>
+          <span>1540 Matthew Brady Blvd Unit #4 · Serving all of Southwestern Ontario</span>
+        </div>
+      </div>
+      <div style="margin-top:20px">
+        <a href="tel:+15199453558" class="btn-primary">📞 Call 519-945-3558</a>
+      </div>
+    </div>
+    <div class="area-map">
+      <div class="area-pill home">📍 Windsor</div>
+      <div class="area-pill">LaSalle</div><div class="area-pill">Amherstburg</div><div class="area-pill">Tecumseh</div><div class="area-pill">Lakeshore</div><div class="area-pill">Leamington</div><div class="area-pill">Kingsville</div><div class="area-pill">Essex</div><div class="area-pill">Chatham</div><div class="area-pill">Southwestern ON</div><div class="area-pill">London</div><div class="area-pill">Sarnia</div>
+    </div>
+  </div>
+</section>
+
+<section class="ctct" id="contact">
+  <div class="ctct-in">
+    <div>
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-h2" style="margin-bottom:14px">Let's Discuss<br>Your Project</h2>
+      <p class="section-p" style="margin-bottom:28px">Get in touch for a free, written project estimate. We respond quickly and work with all project sizes — from single-facility upgrades to multi-site contracts.</p>
+      <div class="cdet"><div class="cdet-ic">📞</div><div class="cdet-tx"><strong>Phone</strong><a href="tel:+15199453558">519-945-3558</a></div></div>
+      <div class="cdet"><div class="cdet-ic">✉️</div><div class="cdet-tx"><strong>Email</strong><a href="mailto:info@powerserveinc.ca">info@powerserveinc.ca</a></div></div>
+      <div class="cdet"><div class="cdet-ic">📍</div><div class="cdet-tx"><strong>Address</strong><span>1540 Matthew Brady Blvd Unit #4, Windsor, ON N8S 3K6</span></div></div>
+      <div class="cdet"><div class="cdet-ic">🏷️</div><div class="cdet-tx"><strong>ESA/ECRA Licence</strong><span>#7000582</span></div></div>
+    </div>
+    <div class="cfrm">
+      <h3>Request a Free Written Estimate</h3>
+      <form>
+        <div class="fg-row">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="fg-row">
+          <div class="fg"><label>Phone</label><input type="tel" placeholder="519-555-0100"></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="john@company.com"></div>
+        </div>
+        <div class="fg">
+          <label>Service Needed</label>
+          <select>
+            <option value="">— Select a service —</option>
+            <option>New Construction</option><option>Renovation & Upgrades</option><option>Transformers</option><option>Fire Alarm & Security Systems</option><option>Energy-Efficient Lighting</option><option>Renewable Energy</option><option>Preventative Maintenance</option><option>Roadway Pole Lines</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="fg"><label>Project Details</label><textarea placeholder="Describe your project — type, scale, location and timeline. The more detail, the faster we can quote."></textarea></div>
+        <button type="submit" class="fsub">Send Request →</button>
+        <p style="font-size:0.76rem;color:var(--muted);text-align:center;margin-top:12px">Free estimates · Licensed &amp; insured · Usually respond same day</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-in">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="ft-nm">PowerServe Inc</div>
+        <p>Trusted electrical contractors serving Windsor and Southwestern Ontario since 2002. ESA/ECRA licensed, Eaton ECCN certified.</p>
+        <div style="margin-top:16px"><a href="tel:+15199453558" style="color:var(--orange);text-decoration:none;font-family:'Outfit',sans-serif;font-weight:700;font-size:0.88rem">📞 519-945-3558</a></div>
+      </div>
+      <div class="ft-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">New Construction</a></li><li><a href="#services">Renovation & Upgrades</a></li><li><a href="#services">Transformers</a></li><li><a href="#services">Fire Alarm & Security Systems</a></li><li><a href="#services">Energy-Efficient Lighting</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Projects</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#process">How It Works</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15199453558">519-945-3558</a></li>
+          <li><a href="mailto:info@powerserveinc.ca">info@powerserveinc.ca</a></li>
+          <li><a href="#area">Windsor &amp; SW Ontario</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2026 PowerServe Inc. All rights reserved.</span>
+      <span>Windsor, ON · <span class="orange">5.0★ Google</span> · ESA Lic. #7000582</span>
+    </div>
+  </div>
+</footer>
+
+<div class="fcall">
+  <div class="fcall-bbl">Call us: <span>519-945-3558</span></div>
+  <button class="fcall-btn" onclick="window.location.href='tel:+15199453558'">📞 Call Now</button>
+</div>
+
+</body>
+</html>
